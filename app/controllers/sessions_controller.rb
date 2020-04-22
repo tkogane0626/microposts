@@ -1,7 +1,8 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  # def new
+  # end
 
+  # ログイン処理を行う
   def create
     email = params[:session][:email].downcase
     password = params[:session][:password]
@@ -14,6 +15,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  # ログアウト処理を行う
   def destroy
     session[:user_id] = nil
     flash[:success] = 'ログアウトしました。'
