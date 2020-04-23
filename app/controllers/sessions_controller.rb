@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-  # def new
-  # end
 
   # ログイン処理を行う
   def create
@@ -23,6 +21,7 @@ class SessionsController < ApplicationController
   end
 
   private
+  # ログイン処理
     def login(email, password)
       @user = User.find_by(email: email)
       if @user && @user.authenticate(password)

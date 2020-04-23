@@ -23,4 +23,5 @@ class ApplicationController < ActionController::Base
     # お気に入り
     @count_likes = user.likes.count
   end
+  
 end
